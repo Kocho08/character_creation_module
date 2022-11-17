@@ -1,7 +1,7 @@
 from random import randint
 
 
-def attack(char_name: str, char_class: str):
+def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} нанёс противнику урон, равный '
                 f'{5 + randint(3, 5)}')
@@ -13,7 +13,7 @@ def attack(char_name: str, char_class: str):
                 f'{5 + randint(-3, -1)}')
 
 
-def defence(char_name: str, char_class: str):
+def defence(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} ед. урона')
     if char_class == 'mage':
@@ -22,7 +22,7 @@ def defence(char_name: str, char_class: str):
         return (f'{char_name} блокировал {10 + randint(2, 5)} ед. урона')
 
 
-def special(char_name: str, char_class: str):
+def special(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение '
                 f'«Выносливость {80 + 25}»')
