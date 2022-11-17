@@ -1,7 +1,7 @@
 from random import randint
 
 
-def attack(char_name: str, char_class: str):
+def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} нанёс противнику урон, равный '
                 f'{5 + randint(3, 5)}')
@@ -44,7 +44,7 @@ def start_training(char_name: str, char_class: str) -> str:
           'defence — чтобы блокировать атаку противника или '
           'special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
-    cmd= None
+    cmd = None
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         if cmd == 'attack':
